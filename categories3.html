@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Gorilla Brand</title>
+<title>Categories</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
@@ -11,8 +11,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/categories.css">
+<link rel="stylesheet" type="text/css" href="styles/categories_responsive.css">
 </head>
 <body>
 
@@ -35,6 +35,7 @@
 											<li><a href="categories.html">Categories</a></li>
 											<li><a href="product.html">Product</a></li>
 											<li><a href="cart.html">Cart</a></li>
+											<li><a href="checkout.html">Check out</a></li>
 											<li><a href="contact.html">Contact</a></li>
 										</ul>
 									</li>
@@ -174,117 +175,17 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_slider_container">
-
-			<!-- Home Slider -->
-			<div class="owl-carousel owl-theme home_slider">
-
-				<!-- Slider Item -->
-				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/blackM.jpg)"></div>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">Men</div>
-										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/rose.jpg)"></div>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">Women</div>
-										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/blackK.jpg)"></div>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">Kids</div>
-										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<!-- Home Slider Dots -->
-
-			<div class="home_slider_dots_container">
+		<div class="home_container">
+			<div class="home_background" style="background-image:url(images/younglife.jpg)"></div>
+			<div class="home_content_container">
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<div class="home_slider_dots">
-								<ul id="home_slider_custom_dots" class="home_slider_custom_dots">
-									<li class="home_slider_custom_dot active">01.</li>
-									<li class="home_slider_custom_dot">02.</li>
-									<li class="home_slider_custom_dot">03.</li>
-								</ul>
+							<div class="home_content">
+								<div class="home_title">Kids<span></span></div>
+								<div class="home_text"><p></p></div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Ads -->
-
-	<div class="avds">
-		<div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
-			<div class="avds_small">
-				<div class="avds_background" style="background-image:url(images/jeanmichael.jpg)"></div>
-				<div class="avds_small_inner">
-					<div class="avds_discount_container">
-
-                        <div>
-							<div class="avds_discount">
-								<div><span></span></div>
-								<div></div>
-							</div>
-						</div>
-					</div>
-					<div class="avds_small_content">
-						<div class="avds_title">Personalise your own designs</div>
-						<div class="avds_link"><a href="categories.html">See More</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="avds_large">
-				<div class="avds_background" style="background-image:url(images/wara2a.jpg)"></div>
-				<div class="avds_large_container">
-					<div class="avds_large_content">
-						<div class="avds_title">Professional Designs</div>
-						<div class="avds_text">Designs made by professional designers through the whole world "Omar".</div>
-						<div class="avds_link avds_link_large"><a href="categories.html">See More</a></div>
 					</div>
 				</div>
 			</div>
@@ -298,70 +199,37 @@
 			<div class="row">
 				<div class="col">
 
+					<!-- Product Sorting -->
+					<div class="sorting_bar d-flex flex-md-row flex-column align-items-md-center justify-content-md-start">
+						<div class="results">Showing <span>3</span> results</div>
+						<div class="sorting_container ml-md-auto">
+							<div class="sorting">
+								<ul class="item_sorting">
+									<li>
+										<span class="sorting_text">Sort by</span>
+										<i class="fa fa-chevron-down" aria-hidden="true"></i>
+										<ul>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Default</span></li>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
+											<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "stars" }'><span>Name</span></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+
 					<div class="product_grid">
 
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/soda.jpg" alt=""></div>
-							<div class="product_extra product_new"><a href="product.html">New</a></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product.html">Basic Black(men)</a></div>
-								<div class="product_price">200 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/x-jean-michel-basquiat-longlsleeve-shirt-poplin-print-white.jpg" alt=""></div>
-							<div class="product_extra product_sale"><a href="product2.html">Sale</a></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product2.html">Jean Michael(men)</a></div>
-								<div class="product_price">300 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/comme-des-garcons-shirt-x-jean-michael-basquiat-longsleeve-shirt-print-white.jpg" alt=""></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product3.html">haga helwa(men)</a></div>
-								<div class="product_price">350 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/mother.jpg" alt=""></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product4.html">om el tananeen(women)</a></div>
-								<div class="product_price">350 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
+							<!-- Product -->
+							<div class="product">
 							<div class="product_image"><img src="images/guns.jpg" alt=""></div>
 							<div class="product_content">
 								<div class="product_title"><a href="product5.html">guns & roses(kids)</a></div>
-								<div class="product_price">250 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/summer.jpg" alt=""></div>
-							<div class="product_extra product_hot"><a href="product6.html">Hot</a></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product6.html">Sumar(women)</a></div>
-								<div class="product_price">250 bolbol</div>
-							</div>
-						</div>
-
-						<!-- Product -->
-						<div class="product">
-							<div class="product_image"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product7.html"> khamra</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -375,27 +243,15 @@
 								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>
-
+					</div>
+					<div class="product_pagination">
+						<ul>
+							<li class="active"><a href="#">01.</a></li>
+							<li><a href="#">02.</a></li>
+							<li><a href="#">03.</a></li>
+						</ul>
 					</div>
 
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Ad -->
-
-	<div class="avds_xl">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="avds_xl_container clearfix">
-						<div class="avds_xl_background" style="background-image:url(images/avds_xl.jpg)"></div>
-						<div class="avds_xl_content">
-							<div class="avds_title">Amazing Designs</div>
-							<div class="avds_text">get your perfecto designato at our pagato.</div>
-							<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -509,6 +365,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/categories.js"></script>
 </body>
 </html>
