@@ -37,5 +37,43 @@
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
+    <?php
+  if(isset($_POST["submit"]))
+  {
+    if(!empty($_POST['username']) && !empty($_POST['password']))
+    {
+      $user = $_POST['username'];
+      $pass = $_POST['password'];
+      $con = mysqli_connect('localhost','root','') or die(mysqli_error());
+      mysqli_select_db($con,'gorilla_brand') or die("cannot select DB");
+      $query = mysqli_query($con,"SELECT * FROM user WHERE user = '".$user."' AND password = '".$pass."'");
+      $numrows = mysqli_num_rows($query);
+      if($numrows != 0)
+      {
+        while($row = mysqli_fetch_assoc($query))
+        {
+          $dbusername = $row['username'];
+          $dbpassword = $row['password'];
+        }
+        if($user == $dbusername && $pass == $dbpassword)
+        {
+          session_start();
+          $_SESSION['sess_user'] = $user;
+          /* Redirect browser */
+          header("Location: index.html");
+        }
+      }
+      else
+      {
+        echo "Invalid username or password!";
+      }
+  }
+  else
+  {
+    echo "All fields are required!";
+  }
+}
+?>
+
 </body>
 </html>
