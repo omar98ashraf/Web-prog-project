@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$Username="root";
-$Password="";
-$Database="gorilla_brand";
+$username="root";
+$password="";
+$database="gorilla_brand";
 
-$con = mysqli_connect($host,$Username,$Password,$Database) or die ("Couldn't connect to Database");
+$con = mysqli_connect($host,$username,$password,$database) or die ("Couldn't connect to Database");
 ?>
