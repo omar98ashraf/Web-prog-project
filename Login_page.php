@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="home.html">
+<form action="" method="post">
   <div class="imgcontainer">
     <img src="images/gorilla_brand.jpg" alt="Avatar" class="avatar">
   </div>
@@ -18,7 +18,7 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
 <div class="clearfix">
-    <button type="submit">Login</button>
+    <button type="submit" name="submit">Login</button>
     <form method="get" action="index.html">
     <button type="button">back</button>
 </form>
@@ -37,16 +37,16 @@
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
-    <?php
+  <?php
   if(isset($_POST["submit"]))
   {
     if(!empty($_POST['username']) && !empty($_POST['password']))
     {
       $user = $_POST['username'];
       $pass = $_POST['password'];
-      $con = mysqli_connect('localhost','root','') or die(mysqli_error());
+      $con = mysqli_connect('localhost','root','root') or die(mysqli_error());
       mysqli_select_db($con,'gorilla_brand') or die("cannot select DB");
-      $query = mysqli_query($con,"SELECT * FROM user WHERE user = '".$user."' AND password = '".$pass."'");
+      $query = mysqli_query($con,"SELECT * FROM user WHERE username = '".$user."' AND password = '".$pass."'");
       $numrows = mysqli_num_rows($query);
       if($numrows != 0)
       {
@@ -59,8 +59,9 @@
         {
           session_start();
           $_SESSION['sess_user'] = $user;
+          $row['active'] = 1;
           /* Redirect browser */
-          header("Location: index.html");
+          header("Location: home.php");
         }
       }
       else
@@ -74,6 +75,5 @@
   }
 }
 ?>
-
 </body>
 </html>

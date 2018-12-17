@@ -8,6 +8,6 @@ if (!mysqli_query($con,$sql))
 }
 else
 {
-	echo "account created";
+	header( "Location: http://localhost:8888/Gorilla%20Brand/Login_page.php" );
 }
 ?>
