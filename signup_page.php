@@ -1,6 +1,6 @@
 <?php
-    $username  = $password = $email = "";
-    $usernameErr = $passwordErr = $emailErr = "";
+    $password = $email = "";
+    $nameErr = $passwordErr = $emailErr = "";
     $valid = true;
     function test_input($data)
     {
@@ -11,20 +11,7 @@
     }
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        if(empty($_POST['username']))
-        {
-            $usernameErr = "Provide Your username";
-            $valid = false;
-        }
-        else
-        {
-            $username = test_input($_POST['username']);
-            if(!preg_match("/^([a-zA-Z' ]+)$/",$fname))
-            {
-                $usernamenameErr = "Only characters allowed";
-                $valid = false;
-            }
-        }
+
         if(empty($_POST['email']))
         {
             $emailErr = "Provide Your Email";
@@ -49,7 +36,7 @@
             $password = test_input($_POST['password']);
             if(!preg_match('/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{8,20}$/', $password))
             {
-                $passwordErr = "Your Password must contain at least one lowercase char, at least one uppercase char, at least one digit, at least one special sign of @#-_$%^&+=§!?, at least 8 characters and at most 30 characters. <br/>";
+                $passwordErr = "Your Password must contain lower-case, upper-case characters, digits, special characters & at least 8 characters . <br/>";
                 $valid = false;
             }
         }
@@ -72,14 +59,13 @@
     <label for="username"><b>username</b></label>
     <input type="text" placeholder="Enter username" name="username" id="uname" required>
     <div id="underInput"></div><br/>
-    <span class = "error"><?php echo $usernameErr;?></span>
 
     <label for="name"><b>name</b></label>
-    <input type="text" placeholder="Enter name" name="name" required>
+    <input type="text" placeholder="Enter name" name="name" required><br/>
 
     <label for="email"><b>Email</b></label>
     <input type="email" placeholder="Enter Email" name="email" required>
-    <span class = "error"><?php echo $emailErr;?></span>
+      <span class = "error"><?php echo $emailErr;?></span> <br/>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>

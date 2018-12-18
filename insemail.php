@@ -8,6 +8,6 @@ if (!mysqli_query($con,$sql))
 }
 else
 {
-	header( "Location: http://localhost:8888/Gorilla%20Brand/index.html" );
+	header( "Location: http://localhost:8888/Gorilla%20Brand/index.php" );
 }
 ?>

@@ -46,7 +46,7 @@
                                     if(isset($_SESSION['sess_user']))
 	    {
 	      echo $_SESSION["sess_user"];
-	      echo '<a href="signout.php"><span>Logout</span></a></li>';
+	      echo '<a href="signout.php"><span> Logout</span></a></li>';
 	    }
 	  	else
 	    {

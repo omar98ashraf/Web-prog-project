@@ -58,7 +58,7 @@
         {
           session_start();
           $_SESSION['sess_user'] = $user;
-          $row['active'] = 1;
+          //$row['active'] = 1;
           /* Redirect browser */
           header("Location: index.php");
         }
