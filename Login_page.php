@@ -19,9 +19,7 @@
     <input type="password" placeholder="Enter Password" name="password" required>
 <div class="clearfix">
     <button type="submit" name="submit">Login</button>
-    <form method="get" action="index.html">
-    <button type="button">back</button>
-</form>
+    <button type="button" onclick="location.href='index.html'">back</button>
    </div>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
