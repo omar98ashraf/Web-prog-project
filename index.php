@@ -141,7 +141,7 @@
 					<li class="page_menu_item has-children menu_mm">
 						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.php">Categories<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
@@ -149,7 +149,7 @@
 						</ul>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
-						<a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+						<a href="categories.php">Categories<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
@@ -194,7 +194,7 @@
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
 										<div class="home_slider_title">Men</div>
 										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="categories.html">Shop Now</a></div>
+										<div class="button button_light home_button"><a href="categories.php">Shop Now</a></div>
 									</div>
 								</div>
 							</div>
@@ -212,7 +212,7 @@
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
 										<div class="home_slider_title">Women</div>
 										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="categories2.html">Shop Now</a></div>
+										<div class="button button_light home_button"><a href="categories2.php">Shop Now</a></div>
 									</div>
 								</div>
 							</div>
@@ -230,7 +230,7 @@
 									<div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
 										<div class="home_slider_title">Kids</div>
 										<div class="home_slider_subtitle">Pick the design which suits you</div>
-										<div class="button button_light home_button"><a href="categories3.html">Shop Now</a></div>
+										<div class="button button_light home_button"><a href="categories3.php">Shop Now</a></div>
 									</div>
 								</div>
 							</div>
@@ -279,7 +279,7 @@
 					</div>
 					<div class="avds_small_content">
 						<div class="avds_title">Personalise your own designs</div>
-						<div class="avds_link"><a href="categories.html">See More</a></div>
+						<div class="avds_link"><a href="categories.php">See More</a></div>
 					</div>
 				</div>
 			</div>
@@ -310,7 +310,7 @@
 							<div class="product_image"><img src="images/soda.jpg" alt=""></div>
 							<div class="product_extra product_new"><a href="product.html">New</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Basic Black(men)</a></div>
+								<div class="product_title"><a href="product.php">Basic Black(men)</a></div>
 								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>
@@ -320,7 +320,7 @@
 							<div class="product_image"><img src="images/x-jean-michel-basquiat-longlsleeve-shirt-poplin-print-white.jpg" alt=""></div>
 							<div class="product_extra product_sale"><a href="product2.html">Sale</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product2.html">Jean Michael(men)</a></div>
+								<div class="product_title"><a href="product2.php">Jean Michael(men)</a></div>
 								<div class="product_price">300 bolbol</div>
 							</div>
 						</div>
@@ -329,7 +329,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/comme-des-garcons-shirt-x-jean-michael-basquiat-longsleeve-shirt-print-white.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product3.html">haga helwa(men)</a></div>
+								<div class="product_title"><a href="product3.php">haga helwa(men)</a></div>
 								<div class="product_price">350 bolbol</div>
 							</div>
 						</div>
@@ -338,7 +338,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/mother.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product4.html">om el tananeen(women)</a></div>
+								<div class="product_title"><a href="product4.php">om el tananeen(women)</a></div>
 								<div class="product_price">350 bolbol</div>
 							</div>
 						</div>
@@ -347,7 +347,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/guns.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product5.html">guns & roses(kids)</a></div>
+								<div class="product_title"><a href="product5.php">guns & roses(kids)</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -357,7 +357,7 @@
 							<div class="product_image"><img src="images/summer.jpg" alt=""></div>
 							<div class="product_extra product_hot"><a href="product6.html">Hot</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product6.html">Sumar(women)</a></div>
+								<div class="product_title"><a href="product6.php">Sumar(women)</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -366,7 +366,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product7.html"> khamra</a></div>
+								<div class="product_title"><a href="product7.php"> khamra</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -376,7 +376,7 @@
 							<div class="product_image"><img src="images/jw.jpg" alt=""></div>
 							<div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product8.html">jhon wilson</a></div>
+								<div class="product_title"><a href="product8.php">jhon wilson</a></div>
 								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>
@@ -398,7 +398,7 @@
 						<div class="avds_xl_content">
 							<div class="avds_title">Amazing Designs</div>
 							<div class="avds_text">get your perfecto designato at our pagato.</div>
-							<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
+							<div class="avds_link avds_xl_link"><a href="categories.php">See More</a></div>
 						</div>
 					</div>
 				</div>

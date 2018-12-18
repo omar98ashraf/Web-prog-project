@@ -64,7 +64,7 @@
 													c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
 											</g>
 										</svg>
-										<div>Cart <span>(0)</span></div>
+										<div>Cart <span>(1)</span></div>
 									</a>
 								</div>
 								<div class="search">
@@ -223,12 +223,12 @@
 								<div><img src="images/mother.jpg" alt=""></div>
 							</div>
 							<div class="cart_item_name_container">
-								<div class="cart_item_name"><a href="#">om el tananeen(women)</a></div>
+								<div class="cart_item_name"><a href="product4.php">om el tananeen(women)</a></div>
 								<div class="cart_item_edit"><a href="#">Edit Product</a></div>
 							</div>
 						</div>
 						<!-- Price -->
-						<div class="cart_item_price">$50</div>
+						<div class="cart_item_price"></div>
 						<!-- Quantity -->
 						<div class="cart_item_quantity">
 							<div class="product_quantity_container">
@@ -243,7 +243,7 @@
 							</div>
 						</div>
 						<!-- Total -->
-						<div class="cart_item_total">$50</div>
+						<div class="cart_item_total">$350</div>
 					</div>
 
 				</div>
@@ -262,22 +262,29 @@
 				<div class="col-lg-4">
 
 					<!-- Delivery -->
+					<?php $delivery = false;?>
 					<div class="delivery">
 						<div class="section_title">Shipping method</div>
 						<div class="section_subtitle">Select the one you want</div>
 						<div class="delivery_options">
 							<label class="delivery_option clearfix">Next day delivery
 								<input type="radio" name="radio">
-								<span class="checkmark"></span>
-								<span class="delivery_price">$4.99</span>
+								<span class="checkmark" <?php $delivery = true;?>></span>
+								<span class="delivery_price">$20</span>
 							</label>
 							<label class="delivery_option clearfix">Standard delivery
 								<input type="radio" checked="checked" name="radio">
 								<span class="checkmark"></span>
-								<span class="delivery_price">$1.99</span>
+								<span class="delivery_price">$10</span>
 							</label>
 						</div>
 					</div>
+<?php
+                    if ($delivery == false)
+                        $total = 350 + 20;
+                    else
+                        $total = 350 + 10;
+                    ?>
 
 					<!-- Coupon Code -->
 					<div class="coupon">
@@ -285,7 +292,7 @@
 						<div class="section_subtitle">Enter your coupon code</div>
 						<div class="coupon_form_container">
 							<form action="#" id="coupon_form" class="coupon_form">
-								<input type="text" class="coupon_input" required="required">
+								<input type="text" class="coupon_input" name="coupon" required="required">
 								<button class="button coupon_button"><span>Apply</span></button>
 							</form>
 						</div>
@@ -300,15 +307,15 @@
 							<ul>
 								<li class="d-flex flex-row align-items-center justify-content-start">
 									<div class="cart_total_title">Subtotal</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
+									<div class="cart_total_value ml-auto"><?php echo "$".$total; ?></div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
 									<div class="cart_total_title">Shipping</div>
-									<div class="cart_total_value ml-auto">Free</div>
+									<div class="cart_total_value ml-auto"><?php echo "$".($total - 350); ?></div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
 									<div class="cart_total_title">Total</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
+									<div class="cart_total_value ml-auto"><?php echo "$".$total; ?></div>
 								</li>
 							</ul>
 						</div>
