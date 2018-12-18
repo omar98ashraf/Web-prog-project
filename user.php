@@ -12,7 +12,7 @@ $numrows = mysqli_num_rows($query);
           $dbusername = $row['username'];
         }
         if($name=='')
-          echo " Enter username";
+          echo " ";
         elseif($name == $dbusername)
             echo $name." is not available";
         else
