@@ -26,22 +26,32 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="index.html">Gorilla Brand</a></div>
+							<div class="logo"><a href="index.php">Gorilla Brand</a></div>
 							<nav class="main_nav">
 								<ul>
 									<li>
-										<a href="index.html">Home</a>
+										<a href="index.php">Home</a>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Categories</a>
+										<a href="categories.php">Categories</a>
 										<ul>
-											<li><a href="categories.html">Men</a></li>
-											<li><a href="categories2.html">Women</a></li>
-											<li><a href="categories3.html">Kids</a></li>
+											<li><a href="categories.php">Men</a></li>
+											<li><a href="categories2.php">Women</a></li>
+											<li><a href="categories3.php">Kids</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="Login_page.html">Login</a></li>
+									<li><a href="contact.php">Contact</a></li>
+									<li><a href="Login_page.php"><?php
+                                        session_start();
+                                    if(isset($_SESSION['sess_user']))
+	    {
+	      echo $_SESSION["sess_user"];
+	      echo '<a href="signout.php"><span>Logout</span></a></li>';
+	    }
+	  	else
+	    {
+	      echo '<li><a href="Login_page.php">Login <i class="fa fa-user"></i></a></li>';
+	    }?></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -194,9 +204,11 @@
 				<!-- Product Image -->
 				<div class="col-lg-6">
 					<div class="details_image">
-						<div class="details_image_large"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
+						<div class="details_image_large"><img src="images/11.jpg" alt=""><div class="product_extra product_new"><a href="categories.html">Sale</a></div></div>
 						<div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
-							<div class="details_image_thumbnail active" data-image="images/737d8e84651d220cba20ecd5cf545cad.jpg"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""></div>
+							<div class="details_image_thumbnail active" data-image="images/11.jpg"><img src="images/11.jpg" alt=""></div>
+							<div class="details_image_thumbnail" data-image="images/12.jpg"><img src="images/12.jpg" alt=""></div>
+							<div class="details_image_thumbnail" data-image="images/13.jpg"><img src="images/13.jpg" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -204,9 +216,9 @@
 				<!-- Product Content -->
 				<div class="col-lg-6">
 					<div class="details_content">
-						<div class="details_name">khamra</div>
-						<div class="details_discount">300 bolbol</div></div>
-						<div class="details_price">250 bolbol</div>
+						<div class="details_name">Jean Michael</div>
+						<div class="details_discount">400 bolbol</div></div>
+						<div class="details_price">350 bolbol</div>
 
 						<!-- In Stock -->
 						<div class="in_stock_container">
@@ -256,6 +268,17 @@
 
 	<!-- Products -->
 
+
+
+	<div class="products">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<div class="product_grid">
+
+						<!-- Product -->
+
 	<div class="products">
 		<div class="container">
 			<div class="row">
@@ -268,7 +291,7 @@
 							<div class="product_image"><img src="images/soda.jpg" alt=""></div>
 							<div class="product_extra product_new"><a href="product.html">New</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">Basic Black(men)</a></div>
+								<div class="product_title"><a href="product.php">Basic Black(men)</a></div>
 								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>
@@ -278,7 +301,7 @@
 							<div class="product_image"><img src="images/x-jean-michel-basquiat-longlsleeve-shirt-poplin-print-white.jpg" alt=""></div>
 							<div class="product_extra product_sale"><a href="product2.html">Sale</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product2.html">Jean Michael(men)</a></div>
+								<div class="product_title"><a href="product2.php">Jean Michael(men)</a></div>
 								<div class="product_price">300 bolbol</div>
 							</div>
 						</div>
@@ -287,7 +310,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/comme-des-garcons-shirt-x-jean-michael-basquiat-longsleeve-shirt-print-white.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product3.html">haga helwa(men)</a></div>
+								<div class="product_title"><a href="product3.php">haga helwa(men)</a></div>
 								<div class="product_price">350 bolbol</div>
 							</div>
 						</div>
@@ -296,7 +319,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/mother.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product4.html">om el tananeen(women)</a></div>
+								<div class="product_title"><a href="product4.php">om el tananeen(women)</a></div>
 								<div class="product_price">350 bolbol</div>
 							</div>
 						</div>
@@ -305,7 +328,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/guns.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product5.html">guns & roses(kids)</a></div>
+								<div class="product_title"><a href="product5.php">guns & roses(kids)</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -315,7 +338,7 @@
 							<div class="product_image"><img src="images/summer.jpg" alt=""></div>
 							<div class="product_extra product_hot"><a href="product6.html">Hot</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product6.html">Sumar(women)</a></div>
+								<div class="product_title"><a href="product6.php">Sumar(women)</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -324,7 +347,7 @@
 						<div class="product">
 							<div class="product_image"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product7.html"> khamra</a></div>
+								<div class="product_title"><a href="product7.php"> khamra</a></div>
 								<div class="product_price">250 bolbol</div>
 							</div>
 						</div>
@@ -334,7 +357,7 @@
 							<div class="product_image"><img src="images/jw.jpg" alt=""></div>
 							<div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product8.html">jhon wilson</a></div>
+								<div class="product_title"><a href="product8.php">jhon wilson</a></div>
 								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>

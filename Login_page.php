@@ -19,14 +19,14 @@
     <input type="password" placeholder="Enter Password" name="password" required>
 <div class="clearfix">
     <button type="submit" name="submit">Login</button>
-    <button type="button" onclick="location.href='index.html'">back</button>
+    <button type="button" onclick="location.href='index.php'">back</button>
    </div>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 </form>
-<form method="get" action="signup_page.html">
+<form method="get" action="signup_page.php">
     <button style="background-color:red;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%" type="submit" >SignUp</button>
 </form>
 
@@ -36,6 +36,7 @@
   </div>
 </form>
   <?php
+  unset($_SESSION["sess_user"]);
   if(isset($_POST["submit"]))
   {
     if(!empty($_POST['username']) && !empty($_POST['password']))
@@ -59,7 +60,7 @@
           $_SESSION['sess_user'] = $user;
           $row['active'] = 1;
           /* Redirect browser */
-          header("Location: home.php");
+          header("Location: index.php");
         }
       }
       else

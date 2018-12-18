@@ -23,22 +23,32 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="index.html">Gorilla Brand</a></div>
+							<div class="logo"><a href="index.php">Gorilla Brand</a></div>
 							<nav class="main_nav">
 								<ul>
 									<li>
-										<a href="index.html">Home</a>
+										<a href="index.php">Home</a>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Categories</a>
+										<a href="categories.php">Categories</a>
 										<ul>
-											<li><a href="categories.html">Men</a></li>
-											<li><a href="categories2.html">Women</a></li>
-											<li><a href="categories3.html">Kids</a></li>
+											<li><a href="categories.php">Men</a></li>
+											<li><a href="categories2.php">Women</a></li>
+											<li><a href="categories3.php">Kids</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="Login_page.html">Login</a></li>
+									<li><a href="contact.php">Contact</a></li>
+									<li><a href="Login_page.php"><?php
+                                        session_start();
+                                    if(isset($_SESSION['sess_user']))
+	    {
+	      echo $_SESSION["sess_user"];
+	      echo '<a href="signout.php"><span>Logout</span></a></li>';
+	    }
+	  	else
+	    {
+	      echo '<li><a href="Login_page.php">Login <i class="fa fa-user"></i></a></li>';
+	    }?></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">

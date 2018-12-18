@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Cart</title>
+<title>Product</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/cart.css">
-<link rel="stylesheet" type="text/css" href="styles/cart_responsive.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/product.css">
+<link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
 </head>
 <body>
 
@@ -23,22 +26,32 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="index.html">Gorilla Brand</a></div>
+							<div class="logo"><a href="index.php">Gorilla Brand</a></div>
 							<nav class="main_nav">
 								<ul>
 									<li>
-										<a href="index.html">Home</a>
+										<a href="index.php">Home</a>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Categories</a>
+										<a href="categories.php">Categories</a>
 										<ul>
-											<li><a href="categories.html">Men</a></li>
-											<li><a href="categories2.html">Women</a></li>
-											<li><a href="categories3.html">Kids</a></li>
+											<li><a href="categories.php">Men</a></li>
+											<li><a href="categories2.php">Women</a></li>
+											<li><a href="categories3.php">Kids</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="Login_page.html">Login</a></li>
+									<li><a href="contact.php">Contact</a></li>
+									<li><a href="Login_page.php"><?php
+                                        session_start();
+                                    if(isset($_SESSION['sess_user']))
+	    {
+	      echo $_SESSION["sess_user"];
+	      echo '<a href="signout.php"><span>Logout</span></a></li>';
+	    }
+	  	else
+	    {
+	      echo '<li><a href="Login_page.php">Login <i class="fa fa-user"></i></a></li>';
+	    }?></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -166,19 +179,14 @@
 
 	<div class="home">
 		<div class="home_container">
-			<div class="home_background" style="background-image:url(images/cart.jpg)"></div>
+			<div class="home_background" style="background-image:url(images/younglife.jpg)"></div>
 			<div class="home_content_container">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<div class="home_content">
-								<div class="breadcrumbs">
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="categories.html">Categories</a></li>
-										<li>Shopping Cart</li>
-									</ul>
-								</div>
+								<div class="home_title">Choose your design<span>.</span></div>
+								<div class="home_text"></div>
 							</div>
 						</div>
 					</div>
@@ -187,127 +195,176 @@
 		</div>
 	</div>
 
-	<!-- Cart Info -->
+	<!-- Product Details -->
 
-	<div class="cart_info">
+	<div class="product_details">
+		<div class="container">
+			<div class="row details_row">
+
+				<!-- Product Image -->
+				<div class="col-lg-6">
+					<div class="details_image">
+						<div class="details_image_large"><img src="images/mother.jpg" alt=""><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
+						<div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
+							<div class="details_image_thumbnail active" data-image="images/mother.jpg"><img src="images/mother.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product Content -->
+				<div class="col-lg-6">
+					<div class="details_content">
+						<div class="details_name">om el tananeen</div>
+						<div class="details_discount">400 bolbol</div></div>
+						<div class="details_price">350 bolbol</div>
+
+						<!-- In Stock -->
+						<div class="in_stock_container">
+							<div class="availability">Availability:</div>
+							<span>In Stock</span>
+						</div>
+						<div class="details_text">
+							<p></p>
+						</div>
+
+						<!-- Product Quantity -->
+						<div class="product_quantity_container">
+							<div class="product_quantity clearfix">
+								<span>Qty</span>
+								<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+								<div class="quantity_buttons">
+									<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+									<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+								</div>
+							</div>
+							<div class="button cart_button"><a href="#">Add to cart</a></div>
+						</div>
+
+						<!-- Share -->
+						<div class="details_share">
+							<span>Share:</span>
+							<ul>
+								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row description_row">
+				<div class="col">
+					<div class="description_text">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Products -->
+
+	<div class="products">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<!-- Column Titles -->
-					<div class="cart_info_columns clearfix">
-						<div class="cart_info_col cart_info_col_product">Product</div>
-						<div class="cart_info_col cart_info_col_price">Price</div>
-						<div class="cart_info_col cart_info_col_quantity">Quantity</div>
-						<div class="cart_info_col cart_info_col_total">Total</div>
-					</div>
-				</div>
-			</div>
-			<div class="row cart_items_row">
+
+					<div class="product_grid">
+
+						<!-- Product -->
+
+	<div class="products">
+		<div class="container">
+			<div class="row">
 				<div class="col">
 
-					<!-- Cart Item -->
-					<div class="cart_item d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-						<!-- Name -->
-						<div class="cart_item_product d-flex flex-row align-items-center justify-content-start">
-							<div class="cart_item_image">
-								<div><img src="images/mother.jpg" alt=""></div>
-							</div>
-							<div class="cart_item_name_container">
-								<div class="cart_item_name"><a href="#">om el tananeen(women)</a></div>
-								<div class="cart_item_edit"><a href="#">Edit Product</a></div>
-							</div>
-						</div>
-						<!-- Price -->
-						<div class="cart_item_price">$50</div>
-						<!-- Quantity -->
-						<div class="cart_item_quantity">
-							<div class="product_quantity_container">
-								<div class="product_quantity clearfix">
-									<span>Qty</span>
-									<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-									<div class="quantity_buttons">
-										<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-										<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-									</div>
-								</div>
+					<div class="product_grid">
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/soda.jpg" alt=""></div>
+							<div class="product_extra product_new"><a href="product.html">New</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.php">Basic Black(men)</a></div>
+								<div class="product_price">200 bolbol</div>
 							</div>
 						</div>
-						<!-- Total -->
-						<div class="cart_item_total">$50</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/x-jean-michel-basquiat-longlsleeve-shirt-poplin-print-white.jpg" alt=""></div>
+							<div class="product_extra product_sale"><a href="product2.html">Sale</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product2.php">Jean Michael(men)</a></div>
+								<div class="product_price">300 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/comme-des-garcons-shirt-x-jean-michael-basquiat-longsleeve-shirt-print-white.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product3.php">haga helwa(men)</a></div>
+								<div class="product_price">350 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/mother.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product4.php">om el tananeen(women)</a></div>
+								<div class="product_price">350 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/guns.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product5.php">guns & roses(kids)</a></div>
+								<div class="product_price">250 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/summer.jpg" alt=""></div>
+							<div class="product_extra product_hot"><a href="product6.html">Hot</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product6.php">Sumar(women)</a></div>
+								<div class="product_price">250 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/737d8e84651d220cba20ecd5cf545cad.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product7.php"> khamra</a></div>
+								<div class="product_price">250 bolbol</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="images/jw.jpg" alt=""></div>
+							<div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product8.php">jhon wilson</a></div>
+								<div class="product_price">200 bolbol</div>
+							</div>
+						</div>
+
 					</div>
 
-				</div>
-			</div>
-			<div class="row row_cart_buttons">
-				<div class="col">
-					<div class="cart_buttons d-flex flex-lg-row flex-column align-items-start justify-content-start">
-						<div class="button continue_shopping_button"><a href="#">Continue shopping</a></div>
-						<div class="cart_buttons_right ml-lg-auto">
-							<div class="button clear_cart_button"><a href="#">Clear cart</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row_extra">
-				<div class="col-lg-4">
-
-					<!-- Delivery -->
-					<div class="delivery">
-						<div class="section_title">Shipping method</div>
-						<div class="section_subtitle">Select the one you want</div>
-						<div class="delivery_options">
-							<label class="delivery_option clearfix">Next day delivery
-								<input type="radio" name="radio">
-								<span class="checkmark"></span>
-								<span class="delivery_price">$4.99</span>
-							</label>
-							<label class="delivery_option clearfix">Standard delivery
-								<input type="radio" checked="checked" name="radio">
-								<span class="checkmark"></span>
-								<span class="delivery_price">$1.99</span>
-							</label>
-						</div>
-					</div>
-
-					<!-- Coupon Code -->
-					<div class="coupon">
-						<div class="section_title">Coupon code</div>
-						<div class="section_subtitle">Enter your coupon code</div>
-						<div class="coupon_form_container">
-							<form action="#" id="coupon_form" class="coupon_form">
-								<input type="text" class="coupon_input" required="required">
-								<button class="button coupon_button"><span>Apply</span></button>
-							</form>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6 offset-lg-2">
-					<div class="cart_total">
-						<div class="section_title">Cart total</div>
-						<div class="section_subtitle">Final info</div>
-						<div class="cart_total_container">
-							<ul>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Subtotal</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Shipping</div>
-									<div class="cart_total_value ml-auto">Free</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div class="cart_total_title">Total</div>
-									<div class="cart_total_value ml-auto">$790.90</div>
-								</li>
-							</ul>
-						</div>
-						<div class="button checkout_button"><a href="#">Proceed to checkout</a></div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
@@ -317,8 +374,10 @@
 <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
 </body>
 </html>
